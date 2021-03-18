@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>happymimi_bringup</name>
+  <version>1.0.0</version>
+  <description>The happymimi_bringup package</description>
+  <maintainer email="kit.robocup.home@gmail.com">issei</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+
+  <depend>xacro</depend>
+  <depend>happymimi_description</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>rosserial_python</depend>
+
+  <depend>urg_node</depend>
+  <depend>realsense2_camera</depend>
+  <depend>respeaker_ros</depend>
+
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>

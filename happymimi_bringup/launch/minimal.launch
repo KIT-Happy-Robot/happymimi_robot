@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+  <!-- robotモデルの読み込み -->
+  <include file="$(find happymimi_bringup)/launch/includes/robot.launch.xml" />
+  <!-- megaroverの起動 -->
+    <include file="$(find happymimi_bringup)/launch/includes/megarover.launch.xml" />
+
+</launch>
