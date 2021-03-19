@@ -7,7 +7,7 @@
     <!-- ポートレート[bit/sec]の設定 -->
     <param name="baud" type="int" value="115200" />
     <!-- Topicのリネーム -->
-    <remap from="/rover_twist" to="/cmd_vel" />
+    <remap from="/rover_twist" to="/cmd_vel_mux" />
     <remap from="/rover_odo" to="/odom" />
   </node>
 
