@@ -10,5 +10,7 @@
     <remap from="/rover_odo" to="/odom" />
   </node>
 
+  <node pkg="happymimi_bringup" type="pub_odom" name="pub_odom" />
+
 </launch>
 
