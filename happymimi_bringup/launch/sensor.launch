@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+  <!-- 2dlidarの起動 -->
+  <include file="$(find happymimi_bringup)/launch/includes/sensors/2dlidar.launch" />
+
+  <!-- realsenseの起動 -->
+  <include file="$(find happymimi_bringup)/launch/includes/sensors/realsense.launch" />
+
+  <!-- respeakerの起動 -->
+  <include file="$(find happymimi_bringup)/launch/includes/sensors/respeaker.launch" />
+
+</launch>
