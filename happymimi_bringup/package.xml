@@ -9,12 +9,16 @@
   <buildtool_depend>catkin</buildtool_depend>
   <depend>rospy</depend>
   <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
 
   <depend>xacro</depend>
   <depend>happymimi_description</depend>
   <depend>robot_state_publisher</depend>
   <depend>rosserial_python</depend>
 
+  <depend>tf</depend>
+  <depend>tf2</depend>
   <depend>urg_node</depend>
   <depend>realsense2_camera</depend>
   <depend>respeaker_ros</depend>
