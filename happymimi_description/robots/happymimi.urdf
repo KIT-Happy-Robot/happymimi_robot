@@ -18,6 +18,19 @@
       </geometry>
     </visual>
   </link>
+  <joint name="doutai_joint" type="fixed">
+    <origin xyz="0 0 0"/>
+    <parent link="base_footprint"/>
+    <child link="doutai_link"/>
+  </joint>
+  <link name="doutai_link">
+    <visual>
+      <origin xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://happymimi_description/meshes/stl/gen2_body.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </visual>
+  </link>
   <material name="orange">
     <color rgba="1.0 0.5 0.2 1"/>
   </material>

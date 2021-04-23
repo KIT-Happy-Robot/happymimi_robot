@@ -13,6 +13,21 @@
 					<mesh filename="package://happymimi_description/meshes/dae/megarover.dae"/>
 				</geometry>
 			</visual>
+	  </link>
+
+    <joint name="doutai_joint" type="fixed">
+    <xacro:insert_block name="joint_origin"/>
+    <parent link="${parent}"/>
+    <child  link="doutai_link"/>
+		</joint>
+    <link name="doutai_link">
+			<visual>
+				<origin xyz="0 0 0"/>
+				<geometry>
+          <mesh filename="package://happymimi_description/meshes/stl/gen2_body.stl" scale="0.01 0.01 0.01" />
+				</geometry>
+			</visual>
 		</link>
+
 	</xacro:macro>
 </robot>
