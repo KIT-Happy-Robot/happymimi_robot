@@ -1,0 +1,5 @@
+# req
+string location_name
+---
+# res
+bool result

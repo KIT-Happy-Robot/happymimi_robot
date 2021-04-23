@@ -8,10 +8,10 @@
     <param name="baud" type="int" value="115200" />
     <!-- Topicのリネーム -->
     <remap from="/rover_twist" to="/cmd_vel" />
-    <!-- <remap from="/rover_odo" to="/odom" /> -->
   </node>
 
-  <!-- <node pkg="happymimi_bringup" type="pub_odom.cpp" name="pub_odom" /> -->
+  <!-- <node pkg="happymimi_bringup" type="pub_odom" name="pub_odom" /> -->
+  <node pkg="happymimi_bringup" type="pub_odom" name="odometry_publisher" />
 
 </launch>
 
