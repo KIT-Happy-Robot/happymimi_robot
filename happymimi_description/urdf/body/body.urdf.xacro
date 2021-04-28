@@ -14,20 +14,21 @@
 				</geometry>
 			</visual>
 	  </link>
-    <!--  -->
+
     <!-- <joint name="doutai_joint" type="fixed"> -->
     <!-- <xacro:insert_block name="joint_origin"/> -->
-    <!-- <parent link="${parent}"/> -->
+    <!-- <parent link="base_link"/> -->
     <!-- <child  link="doutai_link"/> -->
 		<!-- </joint> -->
     <!-- <link name="doutai_link"> -->
 		<!-- 	<visual> -->
-		<!-- 		<origin xyz="0 0 0"/> -->
+		<!-- 		<origin xyz="&#45;0.08 0.10455 0.33" rpy="0 3.14 1.57"/> -->
+    <!--     <color rgba="46 43 44 0.2" /> -->
 		<!-- 		<geometry> -->
     <!--       <mesh filename="package://happymimi_description/meshes/stl/gen2_body.stl" scale="0.01 0.01 0.01" /> -->
 		<!-- 		</geometry> -->
 		<!-- 	</visual> -->
 		<!-- </link> -->
-    <!--  -->
+
 	</xacro:macro>
 </robot>
