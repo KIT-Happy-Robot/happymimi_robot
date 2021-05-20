@@ -56,16 +56,19 @@
   </link>
   <!-- neck -->
   <joint name="neck_joint" type="fixed">
+    <!-- <joint name="neck_joint" type="revolute"> -->
     <parent link="spine_link"/>
     <child link="neck_link"/>
-    <origin rpy="0 0 0" xyz="0 0 0.72"/>
+    <origin rpy="0 0 0" xyz="0 0 0.75"/>
+    <!-- <axis xyz="0 1 0" /> -->
+    <!-- <limit lower="&#45;1.5" upper="1.5" effort="1000" velocity="0.5" /> -->
   </joint>
   <link name="neck_link">
     <visual>
       <!-- <origin xyz="&#45;0.08 0.10455 0.33" rpy="0 3.14 1.57"/> -->
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <cylinder length="0.05" radius="0.03"/>
+        <cylinder length="0.03" radius="0.03"/>
       </geometry>
       <material name="gray"/>
     </visual>

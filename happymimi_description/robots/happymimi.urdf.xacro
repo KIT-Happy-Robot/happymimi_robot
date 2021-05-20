@@ -16,7 +16,7 @@
     <color rgba="0.25 0.25 0.25 1" />
   </material>
 
-  <!-- spine背骨 -->
+  <!-- spine -->
   <joint name="spine_joint" type="fixed">
     <parent link="base_link"/>
     <child  link="spine_link"/>
@@ -24,7 +24,6 @@
   </joint>
   <link name="spine_link">
     <visual>
-      <!-- <origin xyz="&#45;0.08 0.10455 0.33" rpy="0 3.14 1.57"/> -->
       <origin xyz="-0.05 0.10455 0.16" rpy="0 3.14 1.57"/>
       <geometry>
         <mesh filename="package://happymimi_description/meshes/stl/gen2_body.stl" scale="0.01 0.01 0.01" />
@@ -34,17 +33,18 @@
   </link>
 
   <!-- neck -->
-  <joint name="neck_joint" type="fixed">
-    <parent link="spine_link"/>
-    <child  link="neck_link"/>
-    <origin xyz="0 0 0.72" rpy="0 0 0"/>
+  <joint name="neck_joint" type="revolute">
+    <parent link="spine_link" />
+    <child  link="neck_link" />
+    <origin xyz="0 0 0.75" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.5" upper="1.5" effort="1000" velocity="0.5" />
   </joint>
   <link name="neck_link">
     <visual>
-      <!-- <origin xyz="&#45;0.08 0.10455 0.33" rpy="0 3.14 1.57"/> -->
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <cylinder length="0.05" radius="0.03" />
+        <cylinder length="0.03" radius="0.03" />
       </geometry>
       <material name="gray" />
     </visual>
