@@ -20,6 +20,7 @@ add_service_files(
   FILES
   SetLocation.srv
   NaviLocation.srv
+  EnterRoom.srv
 )
 
 ## Generate added messages and services with any dependencies listed here

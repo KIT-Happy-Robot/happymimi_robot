@@ -1,0 +1,5 @@
+# req
+float32 dist
+---
+# res
+bool result
