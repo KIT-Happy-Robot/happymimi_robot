@@ -18,9 +18,9 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate services in the 'srv' folder
 add_service_files(
   FILES
-  SetLocation.srv
-  NaviLocation.srv
-  EnterRoom.srv
+  StrTrg.srv
+  SimpleTrg.srv
+  SetStr.srv
 )
 
 ## Generate added messages and services with any dependencies listed here

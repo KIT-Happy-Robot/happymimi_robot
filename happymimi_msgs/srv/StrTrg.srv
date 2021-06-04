@@ -1,5 +1,5 @@
 # req
-float32 dist
+string data
 ---
 # res
 bool result
