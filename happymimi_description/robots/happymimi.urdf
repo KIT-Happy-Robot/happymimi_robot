@@ -38,34 +38,31 @@
   <material name="gray">
     <color rgba="0.25 0.25 0.25 1"/>
   </material>
-  <!-- spine背骨 -->
+  <!-- spine -->
   <joint name="spine_joint" type="fixed">
     <parent link="base_link"/>
     <child link="spine_link"/>
-    <origin rpy="0 0 0" xyz="-0.052 0 0.166"/>
+    <origin rpy="0 0 0" xyz="-0.03 0 0.165"/>
   </joint>
   <link name="spine_link">
     <visual>
-      <!-- <origin xyz="&#45;0.08 0.10455 0.33" rpy="0 3.14 1.57"/> -->
-      <origin rpy="0 3.14 1.57" xyz="-0.05 0.10455 0.16"/>
+      <origin rpy="0 0 0" xyz="0 0 0.361"/>
       <geometry>
-        <mesh filename="package://happymimi_description/meshes/stl/gen2_body.stl" scale="0.01 0.01 0.01"/>
+        <cylinder length="0.722" radius="0.02"/>
       </geometry>
       <material name="gray"/>
     </visual>
   </link>
   <!-- neck -->
-  <joint name="neck_joint" type="fixed">
-    <!-- <joint name="neck_joint" type="revolute"> -->
+  <joint name="neck_joint" type="revolute">
     <parent link="spine_link"/>
     <child link="neck_link"/>
-    <origin rpy="0 0 0" xyz="0 0 0.75"/>
-    <!-- <axis xyz="0 1 0" /> -->
-    <!-- <limit lower="&#45;1.5" upper="1.5" effort="1000" velocity="0.5" /> -->
+    <origin rpy="0 0 0" xyz="0 0 0.722"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="1000" lower="-1.5" upper="1.5" velocity="0.5"/>
   </joint>
   <link name="neck_link">
     <visual>
-      <!-- <origin xyz="&#45;0.08 0.10455 0.33" rpy="0 3.14 1.57"/> -->
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
         <cylinder length="0.03" radius="0.03"/>
