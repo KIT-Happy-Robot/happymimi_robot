@@ -52,7 +52,7 @@
 
   <!--  lidar  -->
   <joint name="base_laser_link_joint" type="fixed">
-    <parent link="base_link" />
+    <parent link="base_footprint" />
     <child link="base_laser_link" />
     <origin xyz="0.1 0 0.105" rpy="3.14159 0.0 0.0"/>
   </joint>
@@ -61,14 +61,17 @@
       <origin xyz="0 0 0" rpy="0 3.14 3.14"/>
       <geometry>
         <mesh filename="package://happymimi_description/meshes/stl/lrf.stl" />
+        <!-- <cylinder length="0.09" radius="0.03" /> -->
       </geometry>
       <material name="orange" />
     </visual>
   </link>
 
   <!--  realsense  -->
-  <xacro:sensor_d435 parent="neck_link">
-    <origin xyz="0.07 0 0.15"/>
+  <!-- <xacro:sensor_d435 parent="neck_link"> -->
+  <xacro:sensor_d435 parent="base_link">
+    <!-- <origin xyz="0.07 0 0.15"/> -->
+    <origin xyz="0.01 0 0.8"/>
   </xacro:sensor_d435>
 
   <!--  respeaker  -->

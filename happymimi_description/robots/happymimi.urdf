@@ -59,7 +59,7 @@
   </link>
   <!--  lidar  -->
   <joint name="base_laser_link_joint" type="fixed">
-    <parent link="base_link"/>
+    <parent link="base_footprint"/>
     <child link="base_laser_link"/>
     <origin rpy="3.14159 0.0 0.0" xyz="0.1 0 0.105"/>
   </joint>
@@ -68,6 +68,7 @@
       <origin rpy="0 3.14 3.14" xyz="0 0 0"/>
       <geometry>
         <mesh filename="package://happymimi_description/meshes/stl/lrf.stl"/>
+        <!-- <cylinder length="0.09" radius="0.03" /> -->
       </geometry>
       <material name="orange"/>
     </visual>
