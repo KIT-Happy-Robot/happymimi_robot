@@ -2,7 +2,11 @@
 <launch>
   <!-- robotモデルの読み込み -->
   <include file="$(find happymimi_bringup)/launch/include/robot.launch.xml" />
+
   <!-- megaroverの起動 -->
   <include file="$(find happymimi_bringup)/launch/include/megarover.launch.xml" />
+
+  <!-- パラメータの設定 -->
+  <!-- <rosparam ns="/location_dict" command="load" file="$(find happymimi_params)/param/location/demo_1.yaml" /> -->
 
 </launch>
