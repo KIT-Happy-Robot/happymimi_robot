@@ -10,4 +10,7 @@
   <!-- respeakerの起動 -->
   <include file="$(find happymimi_bringup)/launch/include/sensor/respeaker.launch" />
 
+  <!-- dynamixel motorの起動 -->
+  <include file="$(find happymimi_bringup)/launch/include/sensor/motor_setup.launch" />
+
 </launch>
