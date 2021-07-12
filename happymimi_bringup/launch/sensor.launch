@@ -8,6 +8,6 @@
   <include file="$(find realsense2_camera)/launch/rs_rgbd.launch" />
 
   <!-- respeakerの起動 -->
-  <include file="$(find happymimi_bringup)/launch/include/sensor/respeaker.launch" />
+  <!-- <include file="$(find happymimi_bringup)/launch/include/sensor/respeaker.launch" /> -->
 
 </launch>
