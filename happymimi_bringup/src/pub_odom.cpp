@@ -27,7 +27,7 @@ int main(int argc, char** argv){
 
   //get params
   ros::param::param<double>("odom_kv", odom_kv, 1.0);
-  ros::param::param<double>("odom_kth", odom_kth, 1.0);    
+  ros::param::param<double>("odom_kth", odom_kth, 1.0);
 
   double x = 0.0;
   double y = 0.0;
@@ -37,7 +37,8 @@ int main(int argc, char** argv){
   current_time = ros::Time::now();
   last_time = ros::Time::now();
 
-  ros::Rate r(20);
+  /* ros::Rate r(20); */
+  ros::Rate r(50);
   while(n.ok()){
 
     ros::spinOnce();               // check for incoming messages
