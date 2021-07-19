@@ -11,7 +11,7 @@
   </node>
 
   <!-- <node pkg="happymimi_bringup" type="pub_odom" name="pub_odom" /> -->
-  <node pkg="happymimi_bringup" type="pub_odom" name="odometry_publisher" />
+  <!-- <node pkg="happymimi_bringup" type="pub_odom" name="odometry_publisher" /> -->
 
 </launch>
 

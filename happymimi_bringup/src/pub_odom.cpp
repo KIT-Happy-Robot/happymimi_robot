@@ -18,7 +18,8 @@ void roverOdomCallback(const geometry_msgs::Twist::ConstPtr& rover_odom){
 }
 
 int main(int argc, char** argv){
-  ros::init(argc, argv, "odometry_publisher");
+  /* ros::init(argc, argv, "odometry_publisher"); */
+  ros::init(argc, argv, "pub_odom");
 
   ros::NodeHandle n;
   ros::Publisher  odom_pub = n.advertise<nav_msgs::Odometry>("odom", 50);
@@ -37,8 +38,7 @@ int main(int argc, char** argv){
   current_time = ros::Time::now();
   last_time = ros::Time::now();
 
-  /* ros::Rate r(20); */
-  ros::Rate r(50);
+  ros::Rate r(20);
   while(n.ok()){
 
     ros::spinOnce();               // check for incoming messages
@@ -66,7 +66,7 @@ int main(int argc, char** argv){
     geometry_msgs::TransformStamped odom_trans;
     odom_trans.header.stamp = current_time;
     odom_trans.header.frame_id = "odom";
-    odom_trans.child_frame_id = "base_link";
+    odom_trans.child_frame_id = "base_footprint";
 
     odom_trans.transform.translation.x = x;
     odom_trans.transform.translation.y = y;
@@ -88,7 +88,7 @@ int main(int argc, char** argv){
     odom.pose.pose.orientation = odom_quat;
 
     //set the velocity
-    odom.child_frame_id = "base_link";
+    odom.child_frame_id = "base_footprint";
     odom.twist.twist.linear.x = vx;
     odom.twist.twist.linear.y = vy;
     odom.twist.twist.angular.z = vth;
