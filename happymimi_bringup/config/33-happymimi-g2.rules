@@ -1,0 +1,11 @@
+# megarocer
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6015", ATTRS{serial}=="D200BJDV", SYMLINK+="megarover", MODE="0666"
+
+# UTM-30LX
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0x15d1", ATTRS{idProduct}=="0x0000", ATTRS{serial}=="0", SYMLINK+="utm30lx", MODE="0666"
+
+# respeaker
+SUBSYSTEM=="usb", ATTR{idProduct}=="0018", ATTR{idVendor}=="2886", MODE:="0666", SYMLINK+="respeaker"
+
+# dynamixel moter
+KERNEL=="ttyUSB*", DRIVERS=="ftdi_sio", MODE="0666", ATTR{device/latency_timer}="1", SYMLINK+="dynamixel_moter"
