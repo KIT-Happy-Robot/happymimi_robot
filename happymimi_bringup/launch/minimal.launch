@@ -7,6 +7,6 @@
   <include file="$(find happymimi_bringup)/launch/include/megarover.launch.xml" />
 
   <!-- パラメータの設定 -->
-  <rosparam ns="/location_dict" command="load" file="$(find happymimi_params)/param/location/training_area.yaml" />
+  <rosparam ns="/location_dict" command="load" file="$(find happymimi_params)/param/location/0901.yaml" />
 
 </launch>
