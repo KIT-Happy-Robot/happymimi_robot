@@ -10,24 +10,12 @@
 
   <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher"/>
 
-<<<<<<< HEAD
-  <node pkg="robot_pose_ekf" type="robot_pose_ekf" name="robot_pose_ekf">
-      <param name="output_frame" value="/odom"/>
-    <param name="freq" value="30.0"/>
-    <param name="sensor_timeout" value="1.0"/>
-    <param name="odom_used" value="true"/>
-    <param name="imu_used" value="true"/>
-    <param name="vo_used" value="false"/>
-    <param name="debug" value="false"/>
-    <param name="self_diagnose" value="false"/>
-=======
   <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se" clear_params="true" output="screen">
     <rosparam command="load" file="$(find happymimi_bringup)/config/localization_param.yaml" />
     <param name="tf_prefix" value="happymimi"/>
     <remap from="/odometry/filtered" to="fusion/odom" />
     <remap from="odom0" to="/odom" />
     <remap from="imu0"  to="imu/data" />
->>>>>>> 2708eb0c9b3840053653dae2041a1a4eeebbb56c
   </node>
 
 </launch>
