@@ -6,6 +6,7 @@
   <!-- realsenseの起動 -->
   <!-- <include file="$(find happymimi_bringup)/launch/include/sensor/realsense.launch" /> -->
   <!-- <include file="$(find realsense2_camera)/launch/rs_rgbd.launch" /> -->
+  <include file="$(find realsense2_camera)/launch/rs_camera.launch" />
 
   <!-- respeakerの起動 -->
   <!-- <include file="$(find happymimi_bringup)/launch/include/sensor/respeaker.launch" /> -->

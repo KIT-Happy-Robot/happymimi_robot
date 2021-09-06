@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <robot name="happymimiGen2" xmlns:xacro="http://ros.org/wiki/xacro">
   <xacro:include filename="$(find happymimi_description)/urdf/body/body.urdf.xacro"/>
-  <xacro:include filename="$(find happymimi_description)/urdf/camera/d435.urdf.xacro"/>
+  <!-- <xacro:include filename="$(find happymimi_description)/urdf/camera/d435.urdf.xacro"/> -->
+  <xacro:include filename="$(find realsense2_description)/urdf/_d435i.urdf.xacro"/>
 
   <link name="base_footprint"/>
   <xacro:body parent="base_footprint">
@@ -69,11 +70,15 @@
   </link>
 
   <!--  realsense  -->
-  <xacro:sensor_d435 parent="neck_link">
-  <!-- <xacro:sensor_d435 parent="base_link"> -->
-    <origin xyz="0.07 0 0.15"/>
-    <!-- <origin xyz="0.01 0 0.8"/> -->
-  </xacro:sensor_d435>
+  <!-- <xacro:sensor_d435 parent="neck_link"> -->
+  <!-- <!-1- <xacro:sensor_d435 parent="base_link"> -1-> -->
+  <!--   <origin xyz="0.07 0 0.15"/> -->
+  <!--   <!-1- <origin xyz="0.01 0 0.8"/> -1-> -->
+  <!-- </xacro:sensor_d435> -->
+
+  <xacro:sensor_d435i parent="base_link" use_nominal_extrinsics="false">
+    <origin xyz="0 0 0.90"/>
+  </xacro:sensor_d435i>
 
   <!--  respeaker  -->
   <joint name="respeaker_link_joint" type="fixed">
