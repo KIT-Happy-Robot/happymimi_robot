@@ -10,12 +10,12 @@
 
   <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher"/>
 
-  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se" clear_params="true" output="screen">
-    <rosparam command="load" file="$(find happymimi_bringup)/config/localization_param.yaml" />
-    <param name="tf_prefix" value="happymimi"/>
-    <remap from="/odometry/filtered" to="fusion/odom" />
-    <remap from="odom0" to="/odom" />
-    <remap from="imu0"  to="imu/data" />
-  </node>
+  <!-- <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se" clear_params="true" output="screen"> -->
+  <!--   <rosparam command="load" file="$(find happymimi_bringup)/config/localization_param.yaml" /> -->
+  <!--   <param name="tf_prefix" value="happymimi"/> -->
+  <!--   <remap from="/odometry/filtered" to="fusion/odom" /> -->
+  <!--   <remap from="odom0" to="/odom" /> -->
+  <!--   <remap from="imu0"  to="imu/data" /> -->
+  <!-- </node> -->
 
 </launch>
