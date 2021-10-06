@@ -5,7 +5,14 @@ happymimi_bringupはhappymimiの基本機能を開始するためのroslaunchス
 ## Description
 このパッケージには、2つのlaunchファイルがあります。
 ### minimal.launch
-ロボットベースに設置されたマイコンと通信を開始します。
+- ロボットベース制御ボードの起動
+
+- ロボットモデルの生成
+
+happymimi_descriptionにあるxacroファイルを読み込んで、ロボットモデルを生成します。
+
+- パラメータの生成
+> happymimi_paramsにあるyamlファイルを読み込んで、ROSパラメータを生成します。
 
 ### sensor.launch
 下記センサーの起動を行います。
