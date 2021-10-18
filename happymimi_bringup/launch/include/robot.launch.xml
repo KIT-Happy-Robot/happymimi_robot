@@ -14,8 +14,8 @@
   <node pkg="robot_localization" type="ekf_localization_node" name="robot_localization_ekf_node_odom" clear_params="true" output="screen">
     <rosparam command="load" file="$(find happymimi_bringup)/config/localization_param.yaml" />
     <param name="world_frame" value="odom" />
-    <!-- <remap from="odometry/filtered" to="fusion/odom" /> -->
-    <remap from="odometry/filtered" to="/odom" />
+    <remap from="odometry/filtered" to="fusion/odom" />
+    <!-- <remap from="odometry/filtered" to="/odom" /> -->
   </node>
 
   <!-- <node pkg="robot_localization" type="ekf_localization_node" name="robot_localization_ekf_node_map" clear_params="true" output="screen"> -->
