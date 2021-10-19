@@ -5,7 +5,7 @@
   <param name="robot_description" command="$(arg urdf_file)"/>
 
   <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
-    <param name="publish_frequency" type="double" value="5.0" />
+    <param name="publish_frequency" type="double" value="10.0" />
   </node>
 
   <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher"/>
@@ -21,7 +21,8 @@
   <!-- <node pkg="robot_localization" type="ekf_localization_node" name="robot_localization_ekf_node_map" clear_params="true" output="screen"> -->
   <!--   <rosparam command="load" file="$(find happymimi_bringup)/config/localization_param.yaml" /> -->
   <!--   <param name="world_frame" value="map" /> -->
-  <!--   <remap from="odometry/filtered" to="fusion/odom" /> -->
+  <!--   <!-1- <remap from="odometry/filtered" to="fusion/odom" /> -1-> -->
+  <!--   <remap from="odometry/filtered" to="/odom" /> -->
   <!-- </node> -->
 
 </launch>
