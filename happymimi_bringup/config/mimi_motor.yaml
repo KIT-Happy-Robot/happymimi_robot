@@ -1,34 +1,34 @@
-m0_controller:
+shoulder_left_joint:
   ID: 0
   Return_Delay_Time: 0
   Operating_Mode: 3
   Profile_Acceleration: 0
   Profile_Velocity: 80
-m1_controller:
+shoulder_right_joint:
   ID: 1
   Return_Delay_Time: 0
   Operating_Mode: 3
   Profile_Acceleration: 0
   Profile_Velocity: 80
-m2_controller:
+elbow_joint:
   ID: 2
   Return_Delay_Time: 0
   Operating_Mode: 3
   Profile_Acceleration: 0
   Profile_Velocity: 40
-m3_controller:
+wrist_joint:
   ID: 3
   Return_Delay_Time: 0
   Operating_Mode: 3
   Profile_Acceleration: 0
   Profile_Velocity: 60
-m4_controller:
+endeffector_joint:
   ID: 4
   Return_Delay_Time: 0
   Operating_Mode: 5
   Profile_Acceleration: 0
   Profile_Velocity: 50
-m5_controller:
+neck_joint:
   ID: 5
   Return_Delay_Time: 0
   Operating_Mode: 3
