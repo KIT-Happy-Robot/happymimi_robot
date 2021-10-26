@@ -7,11 +7,11 @@
 ### メッセージファイルたち
 
 - ### [SerInt.msg](./msg/StrInt.msg)
-> リクエストなしの、レスポンスがstring型のサービス
+> stfing型、int8型のメッセージ
 
 | Message |
 |---|
-| string型: `data`<br>int8: `num` |
+| string型: `data`、int8型: `num` |
 
 
 ### サービスファイルたち
