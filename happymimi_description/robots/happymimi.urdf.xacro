@@ -76,10 +76,10 @@
   <!--   <!-1- <origin xyz="0.01 0 0.8"/> -1-> -->
   <!-- </xacro:sensor_d435> -->
 
-  <xacro:sensor_d435i parent="base_link" use_nominal_extrinsics="false">
-  <!-- <xacro:sensor_d435i parent="neck_link" use_nominal_extrinsics="false"> -->
-    <origin xyz="0 0 0.90"/>
-    <!-- <origin xyz="0.07 0 0.15"/> -->
+  <!-- <xacro:sensor_d435i parent="base_link" use_nominal_extrinsics="false"> -->
+  <xacro:sensor_d435i parent="neck_link" use_nominal_extrinsics="false">
+    <!-- <origin xyz="0 0 0.90"/> -->
+    <origin xyz="0.07 0 0.15"/>
   </xacro:sensor_d435i>
 
   <!--  respeaker  -->
