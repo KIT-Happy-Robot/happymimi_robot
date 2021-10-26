@@ -12,8 +12,8 @@
 
   <!-- realsenseの起動 -->
   <group if="$(arg realsense)">
-    <include file="$(find realsense2_camera)/launch/rs_camera.launch" />
-    <!-- <include file="$(find realsense2_camera)/launch/rs_rgbd.launch" /> -->
+    <!-- <include file="$(find realsense2_camera)/launch/rs_camera.launch" /> -->
+    <include file="$(find realsense2_camera)/launch/rs_rgbd.launch" />
   </group>
 
   <!-- dynamixel_motorの起動 -->
