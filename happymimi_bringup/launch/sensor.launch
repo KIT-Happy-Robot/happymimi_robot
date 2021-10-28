@@ -2,7 +2,7 @@
 <launch>
   <arg name="2dlidar" default="true" />
   <arg name="realsense" default="true" />
-  <arg name="dynamixel" default="false" />
+  <arg name="dynamixel" default="true" />
   <arg name="respeaker" default="false" />
 
   <!-- 2dlidarの起動 -->

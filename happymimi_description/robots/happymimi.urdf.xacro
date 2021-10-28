@@ -33,7 +33,7 @@
   </link>
 
   <!-- neck -->
-  <joint name="neck_joint" type="revolute">
+  <joint name="m5_neck_joint" type="revolute">
   <!-- <joint name="neck_joint" type="fixed"> -->
     <parent link="spine_link" />
     <child  link="neck_link" />
