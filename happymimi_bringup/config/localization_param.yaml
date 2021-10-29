@@ -1,6 +1,6 @@
 # for wheel and imu fusion
 
-frequency: 30
+frequency: 50
 sensor_timeout: 0.1
 two_d_mode: true
 transform_time_offset: 0.0
@@ -11,8 +11,8 @@ publish_acceleration: false
 
 map_frame: map
 odom_frame: odom
-# base_link_frame: base_link
 base_link_frame: base_footprint
+# base_link_frame: base_link
 
 #odom0: wheel odometry
 odom0: odom
