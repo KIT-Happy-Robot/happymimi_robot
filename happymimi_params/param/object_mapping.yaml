@@ -1,8 +1,7 @@
 {'green snack':'cup',
- 'red snack':'cup',
  'red cup':'cup',
  'blue cup':'cup',
- 'coke':'bottle',
- 'water':'bottle',
+ 'blue juice':'bottle',
+ 'black coffee':'bottle',
  'any':'any',
  }
