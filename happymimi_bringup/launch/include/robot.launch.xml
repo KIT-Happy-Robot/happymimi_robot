@@ -8,8 +8,11 @@
     <param name="publish_frequency" type="double" value="10.0" />
   </node>
 
-  <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher"/>
+  <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher">
+      <!-- <param name="source_list" type="str[]" value"" /> -->
+      <rosparam param="source_list">["/dynamixel_workbench/joint_states"]</rosparam>
 
+  </node>
   <!-- Robot localization -->
   <!-- <node pkg="robot_localization" type="ekf_localization_node" name="robot_localization_ekf_node_odom" clear_params="true" output="screen"> -->
   <!--   <rosparam command="load" file="$(find happymimi_bringup)/config/localization_param.yaml" /> -->
