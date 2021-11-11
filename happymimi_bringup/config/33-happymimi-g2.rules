@@ -1,6 +1,4 @@
 # megarocer
-# SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6015", ATTRS{serial}=="D200BJDV", SYMLINK+="megarover", MODE="0666"
-
 SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6015", ATTRS{serial}=="D200BHVT", SYMLINK+="megarover", MODE="0666"
 
 # UTM-30LX
@@ -8,12 +6,17 @@ KERNEL=="ttyACM[0-9]*", ACTION=="add", ATTRS{idVendor}=="15d1", SYMLINK+="utm30l
 
 # realsense
 # KERNEL=="ttyACM[0-9]*", ACTION=="add", ATTRS{idVendor}=="8086", SYMLINK+="d435i", MODE="0666", GROUP="dialout"
+# realsense d435
+# SUBSYSTEM=="usb", ATTRS{idVendor}=="8086", ATTRS{idProduct}=="0b07", MODE="0666", SYMLINK+="realsense_d435"
+
+# realsense d435i
+# SUBSYSTEM=="usb", ATTRS{idVendor}=="8086", ATTRS{idProduct}=="0b3a", MODE="0666", SYMLINK+="realsense_d435i"
 
 # respeaker
-SUBSYSTEM=="usb", ATTR{idProduct}=="0018", ATTR{idVendor}=="2886", MODE:="0666", SYMLINK+="respeaker"
+SUBSYSTEM=="usb", ATTRS{idVendor}=="2886", ATTRS{idProduct}=="0018", MODE="0666", SYMLINK+="respeaker"
+
+# dualshock joystick
+SUBSYSTEM=="usb", ATTRS{idVendor}=="054c", ATTRS{idProduct}=="09cc", MODE="0666", SYMLINK+="dualshock"
 
 # dynamixel moter
-KERNEL=="ttyUSB*", DRIVERS=="ftdi_sio", MODE="0666", ATTR{device/latency_timer}="1", SYMLINK+="dynamixel_moter"
-
-# joystick
-SUBSYSTEM=="input", ACTION=="add", ATTRS{idVendor}=="054c", SYMLINK+="dualshock", MODE="0666", GROUP="dialout"
+# KERNEL=="ttyUSB*", DRIVERS=="ftdi_sio", MODE="0666", ATTR{device/latency_timer}="1", SYMLINK+="dynamixel_moter"
