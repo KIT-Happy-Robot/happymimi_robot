@@ -8,6 +8,6 @@
 
 
   <!-- パラメータの設定 -->
-  <rosparam ns="/location_dict" command="load" file="$(find happymimi_params)/location/rcap_test_1.yaml" />
+  <rosparam ns="/location_dict" command="load" file="$(find happymimi_params)/location/rcap_2021_map.yaml" />
 
 </launch>
