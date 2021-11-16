@@ -10,11 +10,11 @@
   <rosparam ns="/location_dict" command="load" file="$(find happymimi_params)/location/rcap_2021_map.yaml" />
 
   <!--  Robot localization -->
-  <node pkg="robot_localization" type="ekf_localization_node" name="robot_localization_ekf_node_odom" clear_params="true" output="screen">
-    <rosparam command="load" file="$(find happymimi_bringup)/config/localization_param.yaml" />
-    <param name="world_frame" value="odom" />
-    <remap from="odometry/filtered" to="fusion_odom" />
-    <!-- <remap from="odometry/filtered" to="/odom" /> -->
-  </node>
+  <!-- <node pkg="robot_localization" type="ekf_localization_node" name="robot_localization_ekf_node_odom" clear_params="true" output="screen"> -->
+  <!--   <rosparam command="load" file="$(find happymimi_bringup)/config/localization_param.yaml" /> -->
+  <!--   <param name="world_frame" value="odom" /> -->
+  <!--   <remap from="odometry/filtered" to="fusion_odom" /> -->
+  <!--   <!-1- <remap from="odometry/filtered" to="/odom" /> -1-> -->
+  <!-- </node> -->
 
 </launch>

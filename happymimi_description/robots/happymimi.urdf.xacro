@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <robot name="happymimiGen2" xmlns:xacro="http://ros.org/wiki/xacro">
   <xacro:include filename="$(find happymimi_description)/urdf/body/body.urdf.xacro"/>
-<<<<<<< HEAD
   <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro"/>
   <!-- <xacro:include filename="$(find realsense2_description)/urdf/_d435i.urdf.xacro"/> -->
-=======
-  <!-- <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro"/> -->
-  <xacro:include filename="$(find realsense2_description)/urdf/_d435i.urdf.xacro"/>
->>>>>>> 7efeef1bec0b0d55ed0dfee0bfabaaa56f812b04
 
   <link name="base_footprint"/>
   <xacro:body parent="base_footprint">
