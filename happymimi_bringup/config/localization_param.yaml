@@ -1,6 +1,6 @@
 # for wheel and imu fusion
 
-frequency: 50
+frequency: 30
 sensor_timeout: 0.1
 two_d_mode: true
 transform_time_offset: 0.0
@@ -23,7 +23,7 @@ odom0_config: [false, false, false,
                false, false, false]
 
 #imu0
-imu0: camera/imu
+imu0: /imu/data_raw
 imu0_config: [false, false, false,
               false, false, true,
               false, false, false,

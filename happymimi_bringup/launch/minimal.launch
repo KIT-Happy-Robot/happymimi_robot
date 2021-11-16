@@ -6,8 +6,15 @@
   <!-- megaroverの起動 -->
   <include file="$(find happymimi_bringup)/launch/include/megarover.launch.xml" />
 
-
   <!-- パラメータの設定 -->
   <rosparam ns="/location_dict" command="load" file="$(find happymimi_params)/location/rcap_test_1.yaml" />
+
+  <!--  Robot localization -->
+  <node pkg="robot_localization" type="ekf_localization_node" name="robot_localization_ekf_node_odom" clear_params="true" output="screen">
+    <rosparam command="load" file="$(find happymimi_bringup)/config/localization_param.yaml" />
+    <param name="world_frame" value="odom" />
+    <remap from="odometry/filtered" to="fusion_odom" />
+    <!-- <remap from="odometry/filtered" to="/odom" /> -->
+  </node>
 
 </launch>

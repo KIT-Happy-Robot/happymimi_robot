@@ -2,7 +2,7 @@
 <robot name="happymimiGen2" xmlns:xacro="http://ros.org/wiki/xacro">
   <xacro:include filename="$(find happymimi_description)/urdf/body/body.urdf.xacro"/>
   <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro"/>
-  <xacro:include filename="$(find realsense2_description)/urdf/_d435i.urdf.xacro"/>
+  <!-- <xacro:include filename="$(find realsense2_description)/urdf/_d435i.urdf.xacro"/> -->
 
   <link name="base_footprint"/>
   <xacro:body parent="base_footprint">
@@ -71,9 +71,25 @@
 
 
   <!--  realsense for IMU  -->
-  <xacro:sensor_d435i parent="base_link" use_nominal_extrinsics="false">
-    <origin xyz="0.1 0 0.085"/>
-  </xacro:sensor_d435i>
+  <!-- <xacro:sensor_d435i parent="base_link" use_nominal_extrinsics="false"> -->
+    <!-- <origin xyz="0.1 0 0.085"/> -->
+  <!-- </xacro:sensor_d435i> -->
+
+  <!-- IMU -->
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link" />
+    <child link="imu_link" />
+    <origin xyz="-0.03 0.05 0.185" rpy="0.0 0.0 0.0"/>
+  </joint>
+  <link name="imu_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.03 0.03 0.004"/>
+      </geometry>
+      <material name="orange" />
+    </visual>
+  </link>
 
 
   <!--  realsense for RGB-D Camera -->
