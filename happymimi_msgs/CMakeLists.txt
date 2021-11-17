@@ -20,7 +20,11 @@ add_service_files(
   StrTrg.srv
   SimpleTrg.srv
   SetStr.srv
+<<<<<<< HEAD
+  SetFloat.srv
+=======
   StrToStr.srv
+>>>>>>> cbce320a461bf6c20df8586b30571574b15e7ed8
 )
 
 ## Generate added messages and services with any dependencies listed here
