@@ -20,6 +20,7 @@ add_service_files(
   StrTrg.srv
   SimpleTrg.srv
   SetStr.srv
+  StrToStr.srv
 )
 
 ## Generate added messages and services with any dependencies listed here
