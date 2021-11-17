@@ -20,6 +20,7 @@ add_service_files(
   StrTrg.srv
   SimpleTrg.srv
   SetStr.srv
+  SetFloat.srv
   StrToStr.srv
 )
 
