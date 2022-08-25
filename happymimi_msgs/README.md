@@ -6,7 +6,7 @@
 
 ### メッセージファイルたち
 
-- ### [SerInt.msg](./msg/StrInt.msg)
+- ### [StrInt.msg](./msg/StrInt.msg)
 > stfing型、int8型のメッセージ
 
 | Message |
