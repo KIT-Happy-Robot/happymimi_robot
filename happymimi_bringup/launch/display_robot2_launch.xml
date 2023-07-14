@@ -1,6 +1,6 @@
 <!-- <?xml version="1.0" encoding="utf&#45;8"?> -->
 <launch>
-  <arg name="model" default="$(find happymimi_description)/robots/happymimi.urdf.xacro"/>
+  <arg name="model" default="$(find happymimi_description2)/robots/happymimi.urdf.xacro"/>
   <arg name="gui" default="true"/>
   <arg name="rvizconfig" default="$(find urdf_tutorial)/rviz/urdf.rviz"/>
 
