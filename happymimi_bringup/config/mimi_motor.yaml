@@ -22,7 +22,7 @@ m3_wrist_joint:
   Operating_Mode: 3
   Profile_Acceleration: 0
   Profile_Velocity: 60
-m4_endeffector_joint:
+m4_wrist_joint:
   ID: 4
   Return_Delay_Time: 0
   Operating_Mode: 5
@@ -34,3 +34,8 @@ m5_neck_joint:
   Operating_Mode: 3
   Profile_Acceleration: 0
   Profile_Velocity: 30
+m6_endeffector_joint:
+  ID: 6
+  Return_Delay_Time: 0
+  Profile_Acceleration: 0
+  Profile_Velocity: 50

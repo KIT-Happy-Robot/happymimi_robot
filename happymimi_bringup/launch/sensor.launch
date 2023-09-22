@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <launch>
   <arg name="2dlidar" default="true" />
-  <arg name="realsense" default="true" />
+  <arg name="realsense" default="false" />
   <arg name="dynamixel" default="true" />
   <arg name="respeaker" default="false" />
 
@@ -12,8 +12,8 @@
 
   <!-- realsenseの起動 -->
   <group if="$(arg realsense)">
-    <!-- <include file="$(find realsense2_camera)/launch/rs_camera.launch" /> -->
-    <include file="$(find realsense2_camera)/launch/rs_rgbd.launch" />
+      <!-- <include file="$(find realsense2_camera)/launch/rs_camera.launch" />--> 
+      <include file="$(find realsense2_camera)/launch/rs_rgbd.launch" />
   </group>
 
   <!-- dynamixel_motorの起動 -->
