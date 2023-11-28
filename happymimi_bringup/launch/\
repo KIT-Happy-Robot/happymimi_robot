@@ -7,7 +7,7 @@
   <include file="$(find happymimi_bringup)/launch/include/megarover.launch.xml" />
 
   <!-- パラメータの設定 -->
-  <rosparam ns="/location" command="load" file="$(find happymimi_params)/location/Leb_new_map.yaml" />
+  <rosparam ns="/location" command="load" file="$(find happymimi_params)/location/rcj_2022_yumeko1.yaml" />
 
 
   <!--  Robot localization -->
