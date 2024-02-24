@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   FILES
   StrInt.msg
+  SimpleBool.msg
 )
 
 ## Generate services in the 'srv' folder
@@ -19,6 +20,7 @@ add_service_files(
   FILES
   StrTrg.srv
   SimpleTrg.srv
+  SimpleString.srv
   SetStr.srv
   SetFloat.srv
   StrToStr.srv
