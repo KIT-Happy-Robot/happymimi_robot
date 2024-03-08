@@ -24,6 +24,7 @@ add_service_files(
   SetStr.srv
   SetFloat.srv
   StrToStr.srv
+  TwoFloat32Bool.srv
 )
 
 ## Generate added messages and services with any dependencies listed here
