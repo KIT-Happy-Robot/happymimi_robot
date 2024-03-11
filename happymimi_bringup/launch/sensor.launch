@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <launch>
-  <arg name="2dlidar" default="false" />
-  <arg name="realsense" default="false" />
-  <arg name="dynamixel" default="false" />
+  <arg name="2dlidar" default="true" />
+  <arg name="realsense" default="true" />
+  <arg name="dynamixel" default="true" />
   <arg name="respeaker" default="false" />
   <arg name="rs_max_depth_limit" default="3.0" />
 
@@ -13,7 +13,7 @@
 
   <!-- realsenseの起動 -->
   <group if="$(arg realsense)">
-    <!-- <include file="$(find realsense2_camera)/launch/rs_camera.launch" /> -->
+      <!--<include file="$(find realsense2_camera)/launch/rs_camera.launch" />-->
     <include file="$(find realsense2_camera)/launch/rs_rgbd.launch" />
     <rosparam>/camera/realsense2_camera/max_depth_limit: $(arg rs_max_depth_limit)</rosparam>
   </group>
